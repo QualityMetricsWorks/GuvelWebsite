@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+<style>
+.guvel-experience{position:relative;overflow:hidden}.experience-head{max-width:1000px;margin:0 auto 42px;text-align:center}.experience-head h2{font-size:clamp(2.2rem,4.6vw,4.8rem);margin:12px 0}.experience-head p{max-width:760px;margin:auto}.challenge-flow{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;padding:36px;border:1px solid rgba(12,192,223,.25);background:radial-gradient(circle at center,rgba(12,192,223,.09),transparent 60%)}.fragment,.outcome{padding:14px 16px;border:1px solid rgba(255,49,49,.3);font-size:.72rem;letter-spacing:.1em}.flow-arrow{font-size:2rem;color:#0cc0df}.connected-core{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ff3131,#0cc0df);color:#fff;font-family:Quattrocento,serif;font-size:3rem;box-shadow:0 0 40px rgba(12,192,223,.35);animation:pulseG 2.5s infinite}.connected-core span{font-family:Inter,sans-serif;font-size:.55rem;display:block;margin-top:-26px;letter-spacing:.12em}@keyframes pulseG{50%{transform:scale(1.06);box-shadow:0 0 70px rgba(255,49,49,.35)}}
+.product-showcase{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}.product-copy h2{font-size:clamp(2.1rem,4vw,4rem)}.product-demo{padding:24px;border:1px solid rgba(12,192,223,.35);background:linear-gradient(145deg,rgba(12,192,223,.06),rgba(255,49,49,.04));box-shadow:0 25px 80px rgba(12,192,223,.08)}.demo-top{display:flex;justify-content:space-between;font-size:.75rem;letter-spacing:.1em}.demo-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}.demo-metrics div{padding:16px;border:1px solid rgba(12,192,223,.2)}.demo-metrics strong{display:block;font-size:1.7rem;margin-top:6px}.demo-metrics i{display:block;height:3px;width:65%;background:#ff3131;margin-top:12px;animation:grow 2.5s infinite alternate}.demo-chart{height:170px;position:relative;border-bottom:1px solid rgba(12,192,223,.25);overflow:hidden}.demo-chart>span{position:absolute;left:0;right:0;height:1px;background:rgba(12,192,223,.12)}.demo-chart>span:nth-child(1){top:20%}.demo-chart>span:nth-child(2){top:40%}.demo-chart>span:nth-child(3){top:60%}.demo-chart>span:nth-child(4){top:80%}.demo-chart>span:nth-child(5){display:none}.demo-chart svg{position:absolute;inset:20px 0 0;width:100%;height:130px}.demo-chart polyline{fill:none;stroke:#0cc0df;stroke-width:3;stroke-dasharray:800;stroke-dashoffset:800;animation:draw 3s infinite alternate}@keyframes draw{to{stroke-dashoffset:0}}@keyframes grow{to{width:92%;background:#0cc0df}}
+.teams-intro{text-align:center;max-width:850px;margin:0 auto 38px}.teams-intro h2{font-size:clamp(2rem,4vw,4rem)}.teams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.teams-grid article{padding:32px;border:1px solid rgba(12,192,223,.2);transition:.35s}.teams-grid article:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(12,192,223,.12);border-color:#0cc0df}.teams-grid span{font-family:Quattrocento,serif;color:#ff3131;font-size:2rem}.industrial-proof{background:linear-gradient(120deg,rgba(255,49,49,.04),rgba(12,192,223,.08))}.proof-copy{text-align:center;max-width:850px;margin:auto}.proof-copy h2{font-size:clamp(2rem,4vw,4rem)}.proof-line{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-top:42px;font-size:.75rem;letter-spacing:.08em}.proof-line i{width:60px;height:1px;background:linear-gradient(90deg,#ff3131,#0cc0df)}
+@media(max-width:800px){.product-showcase{grid-template-columns:1fr}.teams-grid{grid-template-columns:1fr}.demo-metrics{grid-template-columns:1fr}.challenge-flow{padding:22px}.flow-arrow{transform:rotate(90deg)}.proof-line i{width:30px}}
+</style>
 </head>
 <body>
   <div class="site-shell">
@@ -103,6 +110,22 @@
         </div>
       </section>
 
+
+      <section class="section guvel-experience" id="experience">
+        <div class="experience-head reveal"><p class="eyebrow">THE INDUSTRIAL CHALLENGE</p><h2>Information should support the operation — not slow it down.</h2><p>Production records, quality data, documents and follow-up often live in separate places. GUVEL brings structure and connection to the information teams use every day.</p></div>
+        <div class="challenge-flow reveal"><div class="fragment">SPREADSHEETS</div><div class="fragment">DOCUMENTS</div><div class="fragment">MANUAL FOLLOW-UP</div><div class="flow-arrow">→</div><div class="connected-core">G<span>CONNECTED</span></div><div class="flow-arrow">→</div><div class="outcome">VISIBILITY</div><div class="outcome">TRACEABILITY</div><div class="outcome">ACTION</div></div>
+      </section>
+
+      <section class="section product-showcase" id="general-system">
+        <div class="product-copy reveal"><p class="eyebrow">AVAILABLE NOW</p><h2>See GUVEL General System in motion.</h2><p>One connected environment for production, quality, scrap and operational visibility.</p><a class="btn btn-primary" href="#contact">Request a demo</a></div>
+        <div class="product-demo reveal"><div class="demo-top"><span>GUVEL GENERAL SYSTEM</span><small>DEMO DATA</small></div><div class="demo-metrics"><div><small>QUALITY</small><strong>98.7%</strong><i></i></div><div><small>PRODUCTION</small><strong>12,450</strong><i></i></div><div><small>SCRAP</small><strong>1.3%</strong><i></i></div></div><div class="demo-chart"><span></span><span></span><span></span><span></span><span></span><svg viewBox="0 0 500 130" preserveAspectRatio="none"><polyline points="0,110 70,88 140,96 220,62 300,72 380,35 500,12"/></svg></div></div>
+      </section>
+
+      <section class="section teams-section" id="teams">
+        <div class="teams-intro reveal"><p class="eyebrow">BUILT FOR THE PEOPLE WHO RUN INDUSTRY</p><h2>Different responsibilities. One connected industrial reality.</h2></div>
+        <div class="teams-grid reveal"><article><span>01</span><h3>QUALITY</h3><p>Quality managers, engineers and teams that need visibility, traceability and control.</p></article><article><span>02</span><h3>OPERATIONS</h3><p>Operations leaders, manufacturing engineers and production teams managing daily performance.</p></article><article><span>03</span><h3>IMPROVEMENT</h3><p>Continuous improvement and industrial leaders turning information into meaningful action.</p></article></div>
+      </section>
+
       <section class="section section-tint" id="approach">
         <div class="approach-layout">
           <div class="approach-copy reveal"><p class="eyebrow" data-i18n="approachEyebrow">THE GUVEL APPROACH</p><h2 data-i18n="approachTitle">Connected, not complicated.</h2><p data-i18n="approachText">Industrial teams often manage critical information across spreadsheets, documents and disconnected tools. GUVEL is being developed as a practical ecosystem that brings structure to those everyday workflows without losing the operational context behind them.</p><a class="text-link" href="#about"><span data-i18n="approachLink">Learn about GUVEL</span> <b>→</b></a></div>
@@ -129,6 +152,10 @@
           <div class="contact-actions"><a class="btn btn-light" href="mailto:contact@guvelsystems.com?subject=GUVEL%20Inquiry" data-i18n="contactButton">Contact GUVEL</a><a class="btn btn-outline-light" href="#solutions" data-i18n="contactSecondary">Explore Solutions</a></div>
         </div>
         <p class="contact-note" data-i18n="contactNote">Note: A dedicated GUVEL business email will be configured as part of the next website stage.</p>
+      </section>
+      <section class="section industrial-proof">
+        <div class="proof-copy reveal"><p class="eyebrow">BUILT FROM INDUSTRIAL REALITY</p><h2>Created around the challenges teams face every day.</h2><p>GUVEL is shaped by practical experience with manufacturing processes, quality systems, operational data and continuous improvement. No invented claims. No generic software story.</p></div>
+        <div class="proof-line reveal"><span>MANUFACTURING</span><i></i><span>QUALITY</span><i></i><span>OPERATIONS</span><i></i><span>IMPROVEMENT</span></div>
       </section>
     </main>
 
