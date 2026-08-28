@@ -1,5 +1,5 @@
 # GUVEL — Smarter Industrial Systems
-## Corporate Website v1.2.0
+## Corporate Website v1.0.0
 
 Static bilingual corporate website prepared for GitHub Pages.
 
