@@ -26,3 +26,7 @@ Do not configure Hostinger DNS until the GitHub Pages site has been confirmed wo
 - Configure a real GUVEL business email before using `contact@guvelsystems.com` publicly.
 - Connect the production domain after testing.
 - Add product detail pages when each GUVEL solution is ready.
+
+
+## v1.2.0
+Updated official GUVEL palette to #ff3131 and #0cc0df, expanded motion language across the website, added Quattrocento signature typography, and redesigned Calibration as a connected cyclical flow.
