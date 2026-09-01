@@ -112,6 +112,62 @@ body.modal-open{overflow:hidden}
 .solutions-grid .solution-card::after{pointer-events:none}
 </style>
 
+
+<style id="guvel-mobile-experience">
+/* v1.5.2 — mobile experience: preserve the same GUVEL identity, motion and interaction */
+@media (max-width: 700px){
+  html{scroll-padding-top:76px}
+  body{font-size:14px;overflow-x:hidden}
+  .topbar{height:70px;padding:0 16px}
+  .brand img{width:34px;height:34px}
+  .brand-copy strong{font-size:14px}.brand-copy small{font-size:6px}
+  .nav.open{top:70px;padding:20px 18px 24px;gap:16px;box-shadow:0 18px 45px rgba(23,32,51,.10)}
+  .hero{min-height:calc(100svh - 70px);padding:64px 18px 54px;gap:34px;align-content:center}
+  .hero h1{font-size:clamp(2.55rem,12vw,4.15rem);line-height:1.02}
+  .hero-text{font-size:15px;line-height:1.65;margin:18px 0 24px}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.hero-actions .btn{width:100%;padding:0 10px}
+  .hero-footnote{font-size:10px;margin-top:22px}
+  .hero:before{width:94vw;height:94vw;right:-48vw;top:10vh}
+  .hero-visual{width:100%;animation:floatFrame 7s ease-in-out infinite}
+  .visual-frame{padding:14px;border-radius:10px}.visual-topline{font-size:9px;padding-bottom:12px}
+  .system-core{margin:14px 0 12px;padding:12px}.core-mark{width:38px;height:38px}
+  .system-grid{grid-template-columns:1fr 1fr;gap:8px}.system-node{min-height:96px;padding:11px}.system-node strong{font-size:11px;margin-top:11px}.system-node small{font-size:9px}
+  .trust-strip{padding:18px;gap:14px}.trust-strip div{gap:12px;row-gap:8px}.trust-strip span{font-size:10px}
+  .section{padding:68px 18px}.section-heading{gap:18px;margin-bottom:28px}.section h2{font-size:clamp(2rem,9vw,3.15rem)}.section-heading>p{font-size:13px;padding-left:22px}
+  .ecosystem-copy h2{font-size:clamp(2.2rem,10vw,3.3rem)}
+  .ecosystem-message{padding:22px 0 0 46px}.message-mark{font-size:34px}
+  .solutions-grid{grid-template-columns:1fr;gap:16px}
+  .solution-card{min-height:0;padding:18px 18px 56px;overflow:hidden;touch-action:manipulation}.solution-card:after{width:120px;height:120px;right:-68px;top:-68px}.solution-card:active{transform:scale(.992)}
+  .solution-card h3{font-size:18px}.solution-card p{font-size:13px;line-height:1.65}.solution-card ul{font-size:12px}.solution-status{bottom:18px}.mini-visual{height:142px;margin:16px 0}
+  /* Keep the top identity line visible and consistent on every solution */
+  .solution-card,.solution-card.featured{border-top:3px solid var(--guvel-cyan)}
+  .solution-card:nth-child(even){border-top-color:var(--guvel-red)}
+  .roadmap{padding:20px 18px;gap:18px}.roadmap strong{font-size:14px}.roadmap-tags{gap:6px}.roadmap-tags span{font-size:8px}
+  /* Signature G transformation remains the focal experience on phones */
+  .guvel-experience .experience-head{margin-bottom:28px}.guvel-experience .signature-morph,.abstract-g-experience.signature-morph{min-height:420px;margin-top:28px;padding:14px 8px 18px;width:100%;border-left:0;border-right:0}
+  .abstract-g-experience .morph-stage,.guvel-experience .morph-stage{height:335px;width:100%;overflow:hidden}
+  .g-glitch{width:min(52vw,205px);height:min(52vw,205px)}
+  .abstract-g-experience .morph-word{font-size:clamp(.48rem,2.5vw,.72rem);letter-spacing:.08em;max-width:43vw;white-space:normal;text-align:center;line-height:1.25}
+  .abstract-g-experience .w1{left:2%;top:24%}.abstract-g-experience .w2{right:2%;top:24%}.abstract-g-experience .w3{left:2%;bottom:21%}.abstract-g-experience .w4{right:2%;bottom:21%}.abstract-g-experience .w5{top:8%;left:50%}.abstract-g-experience .w6{bottom:5%;left:50%}
+  .abstract-g-experience .blob{filter:blur(9px)}.abstract-g-experience .morph-caption{font-size:.5rem;line-height:1.5;padding:0 14px}
+  /* Product/demo remains readable without removing the live chart */
+  .product-showcase{grid-template-columns:1fr;gap:28px}.product-copy h2{font-size:clamp(2rem,9vw,3rem)}.product-demo{padding:16px}.demo-metrics{grid-template-columns:repeat(3,1fr);gap:7px;margin:20px 0}.demo-metrics div{padding:11px}.demo-metrics strong{font-size:1.05rem}.demo-chart{height:145px}.demo-chart svg{height:110px}
+  .teams-grid{grid-template-columns:1fr;gap:12px}.teams-grid article{padding:24px}.teams-grid article:active{transform:scale(.99)}
+  .approach-layout,.about-layout{gap:30px}.principles{grid-template-columns:1fr}.principles article{padding:20px}.focus-grid{grid-template-columns:1fr;margin-top:34px}.focus-grid>div{border-right:0;border-bottom:1px solid var(--line)}
+  .contact-section{padding:0 18px 68px}.contact-card{padding:32px 22px;gap:26px}.contact-card h2{font-size:clamp(2rem,10vw,3rem)}.contact-actions{display:grid;grid-template-columns:1fr;width:100%}.contact-actions .btn{width:100%}.contact-note{text-align:left;line-height:1.55}
+  .proof-line{gap:10px;font-size:.62rem}.proof-line i{width:16px}
+  .footer{padding:26px 18px 32px}.footer-meta{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+  /* Expandable solution details feel native on mobile */
+  .solution-modal{padding:0;align-items:end}.solution-modal-panel{width:100%;max-height:94svh;padding:30px 20px 26px;border:0;border-radius:18px 18px 0 0}.solution-modal-topline{margin:-30px -20px 24px;width:calc(100% + 40px);height:4px}.solution-modal-close{right:12px;top:8px;width:42px;height:42px;border-radius:50%;background:rgba(12,192,223,.08);font-size:1.7rem}.solution-modal-panel h2{font-size:clamp(2rem,10vw,3rem);padding-right:34px}.solution-modal-lead{font-size:1rem;line-height:1.65}.solution-modal-grid{grid-template-columns:1fr;gap:12px;margin:22px 0}.solution-modal-grid>div{padding:17px}.solution-modal-outcome{padding:16px;margin-bottom:20px}.solution-modal-outcome strong{font-size:1.08rem}.solution-modal .btn{width:100%;min-height:46px}
+}
+@media (max-width:390px){
+  .brand-copy small{display:none}.hero h1{font-size:2.45rem}.hero-actions{grid-template-columns:1fr}.system-grid{grid-template-columns:1fr}.system-node{min-height:78px}.demo-metrics{grid-template-columns:1fr}.demo-chart{height:130px}.g-glitch{width:170px;height:170px}
+}
+@media (hover:none) and (pointer:coarse){
+  .solution-card:hover,.teams-grid article:hover,.visual-frame:hover,.principles article:hover{transform:none}
+  .solution-card:active,.teams-grid article:active,.visual-frame:active,.principles article:active{transform:scale(.99)}
+}
+</style>
 </head>
 <body>
   <div class="site-shell">

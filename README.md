@@ -1,37 +1,14 @@
-# GUVEL — Smarter Industrial Systems
-## Corporate Website v1.2.0
+# GUVEL Smarter Industrial Systems Website v1.5.2
 
-Static bilingual corporate website prepared for GitHub Pages.
+Mobile experience refinement
 
-### Structure
-- `index.html` — website
-- `css/styles.css` — responsive design
-- `js/app.js` — ES/EN switch, menu and reveal animations
-- `assets/guvel-logo.jpeg` — GUVEL logo reference asset
+## What changed
+- The mobile layout now preserves the same visual hierarchy and GUVEL identity as desktop
+- Solution cards keep their animated visual language and consistent top identity bars
+- The GUVEL G transformation remains fully visible and centered on mobile, including the words phase and reconstruction cycle
+- Product demos, charts and solution animations remain active instead of being simplified away
+- Solution detail panels are optimized as native mobile bottom-sheet experiences
+- Navigation, buttons, typography and spacing are tuned for touch interaction and smaller screens
+- Existing desktop animations and interactions were preserved
 
-### Local preview
-Open `index.html` in a browser.
-
-### GitHub Pages deployment
-1. Create a GitHub repository, e.g. `guvelsystems-website`.
-2. Upload all files from this package to the repository root.
-3. Go to **Settings → Pages**.
-4. Select deployment from the `main` branch and `/ (root)`.
-5. Save.
-6. Wait for the GitHub Pages URL to become available.
-
-Do not configure Hostinger DNS until the GitHub Pages site has been confirmed working.
-
-### Important next production steps
-- Configure a real GUVEL business email before using `contact@guvelsystems.com` publicly.
-- Connect the production domain after testing.
-- Add product detail pages when each GUVEL solution is ready.
-
-
-## v1.2.0
-Updated official GUVEL palette to #ff3131 and #0cc0df, expanded motion language across the website, added Quattrocento signature typography, and redesigned Calibration as a connected cyclical flow.
-
-
-## v1.5.1 fixes
-- Fixed the GUVEL G transformation cycle so the mark fully disappears before the words appear, then rebuilds after the words fade
-- Restored a consistent top identity line on all four solution cards
+Upload the contents of this package to the existing GitHub Pages repository to publish the update
