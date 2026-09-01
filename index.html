@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="GUVEL — Smarter Industrial Systems. Digital systems for quality, operations and continuous improvement.">
   <title>GUVEL | Smarter Industrial Systems</title>
+  <link rel="icon" type="image/png" href="assets/guvel-favicon.png">
+  <link rel="apple-touch-icon" href="assets/guvel-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
@@ -46,6 +48,59 @@
 @media(max-width:700px){.guvel-experience .signature-morph{min-height:440px;padding-left:12px;padding-right:12px}.guvel-experience .morph-stage{height:345px}.guvel-experience .logo-dissolve{width:145px}.guvel-experience .morph-word{font-size:.56rem;letter-spacing:.10em}.guvel-experience .w1{left:4%;top:23%}.guvel-experience .w2{right:3%;top:24%}.guvel-experience .w3{left:3%;bottom:20%}.guvel-experience .w4{right:1%;bottom:20%}.guvel-experience .w5{top:6%}.guvel-experience .w6{bottom:4%}.guvel-experience .morph-caption{font-size:.54rem;line-height:1.6;padding:0 10px}}
 @media(prefers-reduced-motion:reduce){.guvel-experience .signature-morph *{animation:none!important}.guvel-experience .morph-word{opacity:1}.guvel-experience .paint,.guvel-experience .liquid-ring{display:none}}
 </style>
+
+<style id="v15-overrides">
+:root{--guvel-red:#ff3131;--guvel-cyan:#0cc0df}
+.solution-card{position:relative;cursor:pointer}
+.solution-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--guvel-red),var(--guvel-cyan));opacity:.95}
+.solution-card.featured::before{height:5px}
+.solution-card:focus-visible{outline:2px solid var(--guvel-cyan);outline-offset:5px}
+.solution-expand-hint{display:block;margin-top:18px;font-size:.68rem;letter-spacing:.12em;color:var(--guvel-cyan);font-weight:800}
+.solution-card:hover .solution-expand-hint{color:var(--guvel-red)}
+.solution-modal{position:fixed;inset:0;z-index:999;display:none;place-items:center;padding:24px}
+.solution-modal.is-open{display:grid}
+.solution-modal-backdrop{position:absolute;inset:0;background:rgba(11,19,34,.68);backdrop-filter:blur(10px)}
+.solution-modal-panel{position:relative;z-index:1;width:min(860px,100%);max-height:min(760px,90vh);overflow:auto;background:#fff;color:#172033;padding:44px;border:1px solid rgba(12,192,223,.32);box-shadow:0 40px 100px rgba(0,0,0,.28)}
+.solution-modal-topline{height:5px;width:100%;margin:-44px 0 34px;background:linear-gradient(90deg,var(--guvel-red),var(--guvel-cyan))}
+.solution-modal-close{position:absolute;right:16px;top:16px;border:0;background:transparent;font-size:2rem;cursor:pointer;color:#172033}
+.solution-modal-panel h2{font-size:clamp(2rem,5vw,4rem);margin:8px 0 14px}
+.solution-modal-lead{font-size:1.08rem;line-height:1.75;max-width:760px}
+.solution-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
+.solution-modal-grid>div{padding:22px;border:1px solid rgba(12,192,223,.2);background:linear-gradient(145deg,rgba(12,192,223,.04),rgba(255,49,49,.025))}
+.solution-modal-grid h3{margin-top:0}
+.solution-modal-grid li{margin:9px 0;line-height:1.55}
+.solution-modal-outcome{padding:20px;border-left:4px solid var(--guvel-red);background:rgba(12,192,223,.05);margin-bottom:26px}
+.solution-modal-outcome span{display:block;font-size:.68rem;letter-spacing:.14em;color:#6b7280;margin-bottom:6px}
+.solution-modal-outcome strong{font-family:Quattrocento,serif;font-size:1.25rem}
+body.modal-open{overflow:hidden}
+
+/* Abstract GUVEL G: organic blobs + RGB glitch while preserving the original mark */
+.abstract-g-experience.signature-morph{background:#fff;border-color:rgba(23,32,51,.08);min-height:430px}
+.abstract-g-experience .morph-stage{height:340px}
+.abstract-g-experience .blob{position:absolute;left:50%;top:50%;width:145px;height:115px;background:#172033;opacity:.08;filter:blur(2px);transform:translate(-50%,-50%);border-radius:58% 42% 64% 36% / 42% 54% 46% 58%;animation:blobMorph 9s ease-in-out infinite}
+.abstract-g-experience .blob-a{margin-left:-95px;margin-top:-48px;animation-delay:0s}
+.abstract-g-experience .blob-b{margin-left:95px;margin-top:-32px;animation-delay:-2s}
+.abstract-g-experience .blob-c{margin-left:-45px;margin-top:70px;animation-delay:-4s}
+.abstract-g-experience .blob-d{margin-left:72px;margin-top:75px;animation-delay:-6s}
+.g-glitch{position:absolute;left:50%;top:50%;width:220px;height:220px;transform:translate(-50%,-50%);animation:gDissolve 10s ease-in-out infinite;isolation:isolate}
+.g-glitch img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.g-main{z-index:3;filter:grayscale(1) contrast(1.3) brightness(.18)}
+.g-rgb{z-index:2;mix-blend-mode:multiply;opacity:.42}
+.g-red{transform:translate(-6px,2px);filter:sepia(1) saturate(12) hue-rotate(310deg) brightness(1.05)}
+.g-cyan{transform:translate(6px,-2px);filter:sepia(1) saturate(8) hue-rotate(135deg) brightness(1.08)}
+.abstract-g-experience .morph-word{color:#172033;text-shadow:none;font-size:clamp(.58rem,1vw,.84rem);z-index:8;letter-spacing:.12em}
+.abstract-g-experience .w1{left:13%;top:21%;color:#172033}
+.abstract-g-experience .w2{right:12%;top:25%;color:var(--guvel-red)}
+.abstract-g-experience .w3{left:11%;bottom:20%;color:var(--guvel-cyan)}
+.abstract-g-experience .w4{right:10%;bottom:20%;color:#172033}
+.abstract-g-experience .w5{left:50%;top:4%;color:var(--guvel-cyan)}
+.abstract-g-experience .w6{left:50%;bottom:2%;color:var(--guvel-red)}
+.abstract-g-experience .morph-caption{color:#172033}
+@keyframes blobMorph{0%,100%{transform:translate(-50%,-50%) scale(.65) rotate(0deg);border-radius:58% 42% 64% 36% / 42% 54% 46% 58%;opacity:.05}40%{transform:translate(-50%,-50%) scale(1.25) rotate(28deg);border-radius:35% 65% 40% 60% / 58% 36% 64% 42%;opacity:.14}65%{transform:translate(-50%,-50%) scale(.9) rotate(-20deg);opacity:.08}}
+@keyframes gDissolve{0%,20%,100%{transform:translate(-50%,-50%) scale(1);filter:none;clip-path:inset(0 0 0 0)}31%{transform:translate(-50%,-50%) scale(1.03,.98) skewX(2deg);clip-path:polygon(0 0,100% 0,100% 22%,88% 27%,100% 33%,100% 100%,0 100%,0 72%,12% 65%,0 58%)}43%{transform:translate(-50%,-50%) scale(.94,.88);filter:blur(1.4px);clip-path:polygon(28% 0,100% 7%,73% 28%,100% 45%,58% 54%,94% 76%,26% 100%,0 73%,17% 48%,0 22%)}55%{transform:translate(-50%,-50%) scale(.72);opacity:.28;filter:blur(3px)}68%{transform:translate(-50%,-50%) scale(.98);opacity:.92;filter:blur(.3px)}}
+@media(max-width:720px){.solution-modal-grid{grid-template-columns:1fr}.abstract-g-experience .morph-stage{height:300px}.abstract-g-experience .w1{left:2%}.abstract-g-experience .w2{right:2%}.abstract-g-experience .w3{left:2%}.abstract-g-experience .w4{right:2%}.g-glitch{width:170px;height:170px}}
+</style>
+
 </head>
 <body>
   <div class="site-shell">
@@ -108,30 +163,30 @@
           <div class="ecosystem-message"><span class="message-mark">G</span><p data-i18n="solutionsText">Each solution is designed around a specific operational need while sharing a common GUVEL approach to clarity, traceability and usability.</p><div class="connection-line"><i></i><i></i><i></i></div></div>
         </div>
         <div class="solutions-grid">
-          <article class="solution-card featured reveal">
+          <article class="solution-card featured reveal solution-expandable" role="button" tabindex="0" data-solution="general" aria-expanded="false">
             <div class="solution-number guvel-number">01</div><div class="solution-icon guvel-mark">GS<span></span></div>
             <div class="mini-visual productivity"><div class="mini-label">PRODUCTIVITY</div><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 220 60" preserveAspectRatio="none"><polyline points="0,52 42,43 82,45 122,25 165,30 220,8"/></svg><b>+18%</b></div>
             <h3>GUVEL General System</h3><p data-i18n="gsText">A connected view of quality and operational performance, designed to support daily manufacturing decisions.</p>
             <ul><li data-i18n="gs1">Production and quality records</li><li data-i18n="gs2">Scrap and performance visibility</li><li data-i18n="gs3">Operational indicators</li></ul>
-            <span class="solution-status" data-i18n="available">AVAILABLE</span>
+            <span class="solution-status" data-i18n="available">AVAILABLE</span><span class="solution-expand-hint" data-i18n="learnMore">Click to explore</span>
           </article>
-          <article class="solution-card reveal">
+          <article class="solution-card reveal solution-expandable" role="button" tabindex="0" data-solution="calibration" aria-expanded="false">
             <div class="solution-number guvel-number">02</div><div class="solution-icon orange-icon guvel-mark">CAL<span></span></div>
             <div class="mini-visual calibration-viz"><div class="mini-label">CONNECTED TRACEABILITY</div><div class="cal-cycle"><svg viewBox="0 0 260 100" aria-label="Calibration cycle"><path d="M30 52 C52 18 88 18 108 50 S160 82 180 50 S224 18 236 46"/><path class="active-path" d="M30 52 C52 18 88 18 108 50 S160 82 180 50 S224 18 236 46"/><circle cx="30" cy="52" r="6"/><circle cx="108" cy="50" r="6"/><circle cx="180" cy="50" r="6"/><circle cx="236" cy="46" r="6"/><text x="12" y="80">EQUIP</text><text x="82" y="28">CHECK</text><text x="154" y="82">CERTIFY</text><text x="210" y="25">REPEAT</text></svg></div></div>
             <h3>GUVEL Calibration</h3><p data-i18n="calText">A structured environment for equipment, calibration schedules, certificates and measurement traceability.</p>
-            <span class="solution-status development" data-i18n="development">IN DEVELOPMENT</span>
+            <span class="solution-status development" data-i18n="comingNext">COMING NEXT</span><span class="solution-expand-hint" data-i18n="learnMore">Click to explore</span>
           </article>
-          <article class="solution-card reveal">
+          <article class="solution-card reveal solution-expandable" role="button" tabindex="0" data-solution="documents" aria-expanded="false">
             <div class="solution-number guvel-number">03</div><div class="solution-icon green-icon guvel-mark">DOC<span></span></div>
             <div class="mini-visual document-viz"><div class="mini-label">DOCUMENT FLOW</div><div class="doc-stack"><i></i><i></i><i></i></div><div class="doc-lines"><span></span><span></span><span></span></div></div>
             <h3>GUVEL Documents</h3><p data-i18n="docText">Controlled document management built around revisions, approvals and access to current information.</p>
-            <span class="solution-status development" data-i18n="development">IN DEVELOPMENT</span>
+            <span class="solution-status development" data-i18n="comingNext">COMING NEXT</span><span class="solution-expand-hint" data-i18n="learnMore">Click to explore</span>
           </article>
-          <article class="solution-card reveal">
+          <article class="solution-card reveal solution-expandable" role="button" tabindex="0" data-solution="actions" aria-expanded="false">
             <div class="solution-number guvel-number">04</div><div class="solution-icon navy-icon guvel-mark">ACT<span></span></div>
             <div class="mini-visual action-viz"><div class="mini-label">ACTION FLOW</div><div class="action-path"><i></i><i></i><i></i><i></i></div><div class="action-progress"><span></span></div></div>
             <h3>GUVEL Actions</h3><p data-i18n="actText">A focused system for responsibilities, corrective actions, due dates and meaningful follow-up.</p>
-            <span class="solution-status development" data-i18n="development">IN DEVELOPMENT</span>
+            <span class="solution-status development" data-i18n="comingNext">COMING NEXT</span><span class="solution-expand-hint" data-i18n="learnMore">Click to explore</span>
           </article>
         </div>
         <div class="roadmap reveal">
@@ -142,27 +197,30 @@
 
 
       <section class="section guvel-experience" id="experience">
-        <div class="experience-head reveal"><p class="eyebrow">THE INDUSTRIAL CHALLENGE</p><h2>Information should support the operation — not slow it down.</h2><p>Production records, quality data, documents and follow-up often live in separate places. GUVEL brings structure and connection to the information teams use every day.</p></div>
-        <div class="guvel-morph signature-morph" aria-label="GUVEL identity transforming into connected industrial information">
+        <div class="experience-head reveal"><p class="eyebrow" data-i18n="challengeEyebrow">THE INDUSTRIAL CHALLENGE</p><h2 data-i18n="challengeTitle">Information should support the operation — not slow it down</h2><p data-i18n="challengeText">Production records, quality data, documents and follow-up often live in separate places. GUVEL brings structure and connection to the information teams use every day</p></div>
+        <div class="guvel-morph signature-morph abstract-g-experience" aria-label="GUVEL identity transforming into industrial outcomes">
           <div class="morph-stage">
-            <div class="morph-aura"></div>
-            <div class="liquid-ring ring-one"></div><div class="liquid-ring ring-two"></div>
-            <div class="logo-dissolve"><img src="assets/guvel-g-transparent.png" alt="GUVEL G symbol" class="guvel-g-mark-img"></div>
-            <div class="paint paint-a"></div><div class="paint paint-b"></div><div class="paint paint-c"></div><div class="paint paint-d"></div><div class="paint paint-e"></div>
-            <span class="morph-word w1">VISIBILITY</span><span class="morph-word w2">ACTIONS</span><span class="morph-word w3">DOCUMENTS</span><span class="morph-word w4">PRODUCTIVITY</span><span class="morph-word w5">TRACEABILITY</span><span class="morph-word w6">QUALITY</span>
+            <div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div><div class="blob blob-d"></div>
+            <div class="g-glitch">
+              <img src="assets/guvel-g-transparent.png" alt="GUVEL G symbol" class="g-main">
+              <img src="assets/guvel-g-transparent.png" alt="" aria-hidden="true" class="g-rgb g-red">
+              <img src="assets/guvel-g-transparent.png" alt="" aria-hidden="true" class="g-rgb g-cyan">
+            </div>
+            <span class="morph-word w1">TRACEABILITY</span><span class="morph-word w2">QUALITY</span><span class="morph-word w3">PRODUCTIVITY</span>
+            <span class="morph-word w4">VISIBILITY</span><span class="morph-word w5">ACTIONS</span><span class="morph-word w6">DOCUMENTS</span>
           </div>
-          <p class="morph-caption">FROM ONE INDUSTRIAL MARK TO THE INFORMATION THAT MOVES THE OPERATION.</p>
+          <p class="morph-caption" data-i18n="morphCaption">FROM ONE INDUSTRIAL MARK TO THE INFORMATION THAT MOVES THE OPERATION</p>
         </div>
       </section>
 
       <section class="section product-showcase" id="general-system">
-        <div class="product-copy reveal"><p class="eyebrow">AVAILABLE NOW</p><h2>See GUVEL General System in motion.</h2><p>One connected environment for production, quality, scrap and operational visibility.</p><a class="btn btn-primary" href="#contact">Request a demo</a></div>
+        <div class="product-copy reveal"><p class="eyebrow" data-i18n="availableNow">AVAILABLE NOW</p><h2 data-i18n="generalShowcaseTitle">See GUVEL General System in motion</h2><p data-i18n="generalShowcaseText">One connected environment for production, quality, scrap and operational visibility</p><a class="btn btn-primary" href="#contact" data-i18n="requestDemo">Request a demo</a></div>
         <div class="product-demo reveal"><div class="demo-top"><span>GUVEL GENERAL SYSTEM</span><small>DEMO DATA</small></div><div class="demo-metrics"><div><small>QUALITY</small><strong>98.7%</strong><i></i></div><div><small>PRODUCTION</small><strong>12,450</strong><i></i></div><div><small>SCRAP</small><strong>1.3%</strong><i></i></div></div><div class="demo-chart"><span></span><span></span><span></span><span></span><span></span><svg viewBox="0 0 500 130" preserveAspectRatio="none"><polyline points="0,110 70,88 140,96 220,62 300,72 380,35 500,12"/></svg></div></div>
       </section>
 
       <section class="section teams-section" id="teams">
-        <div class="teams-intro reveal"><p class="eyebrow">BUILT FOR THE PEOPLE WHO RUN INDUSTRY</p><h2>Different responsibilities. One connected industrial reality.</h2></div>
-        <div class="teams-grid reveal"><article><span>01</span><h3>QUALITY</h3><p>Quality managers, engineers and teams that need visibility, traceability and control.</p></article><article><span>02</span><h3>OPERATIONS</h3><p>Operations leaders, manufacturing engineers and production teams managing daily performance.</p></article><article><span>03</span><h3>IMPROVEMENT</h3><p>Continuous improvement and industrial leaders turning information into meaningful action.</p></article></div>
+        <div class="teams-intro reveal"><p class="eyebrow" data-i18n="teamsEyebrow">BUILT FOR THE PEOPLE WHO RUN INDUSTRY</p><h2 data-i18n="teamsTitle">Different responsibilities. One connected industrial reality</h2></div>
+        <div class="teams-grid reveal"><article><span>01</span><h3 data-i18n="teamQualityTitle">QUALITY</h3><p data-i18n="teamQualityText">Quality managers, engineers and teams that need visibility, traceability and control</p></article><article><span>02</span><h3 data-i18n="teamOperationsTitle">OPERATIONS</h3><p data-i18n="teamOperationsText">Operations leaders, manufacturing engineers and production teams managing daily performance</p></article><article><span>03</span><h3 data-i18n="teamImprovementTitle">IMPROVEMENT</h3><p data-i18n="teamImprovementText">Continuous improvement and industrial leaders turning information into meaningful action</p></article></div>
       </section>
 
       <section class="section section-tint" id="approach">
@@ -193,10 +251,27 @@
         <p class="contact-note" data-i18n="contactNote">Note: A dedicated GUVEL business email will be configured as part of the next website stage.</p>
       </section>
       <section class="section industrial-proof">
-        <div class="proof-copy reveal"><p class="eyebrow">BUILT FROM INDUSTRIAL REALITY</p><h2>Created around the challenges teams face every day.</h2><p>GUVEL is shaped by practical experience with manufacturing processes, quality systems, operational data and continuous improvement. No invented claims. No generic software story.</p></div>
-        <div class="proof-line reveal"><span>MANUFACTURING</span><i></i><span>QUALITY</span><i></i><span>OPERATIONS</span><i></i><span>IMPROVEMENT</span></div>
+        <div class="proof-copy reveal"><p class="eyebrow" data-i18n="proofEyebrow">BUILT FROM INDUSTRIAL REALITY</p><h2 data-i18n="proofTitle">Created around the challenges teams face every day</h2><p data-i18n="proofText">GUVEL is shaped by practical experience with manufacturing processes, quality systems, operational data and continuous improvement. No invented claims. No generic software story</p></div>
+        <div class="proof-line reveal"><span data-i18n="proofManufacturing">MANUFACTURING</span><i></i><span data-i18n="proofQuality">QUALITY</span><i></i><span data-i18n="proofOperations">OPERATIONS</span><i></i><span data-i18n="proofImprovement">IMPROVEMENT</span></div>
       </section>
     </main>
+
+    <div class="solution-modal" id="solutionModal" aria-hidden="true">
+  <div class="solution-modal-backdrop" data-close-modal></div>
+  <section class="solution-modal-panel" role="dialog" aria-modal="true" aria-labelledby="solutionModalTitle">
+    <button class="solution-modal-close" type="button" aria-label="Close" data-close-modal>×</button>
+    <div class="solution-modal-topline"></div>
+    <p class="eyebrow" id="solutionModalEyebrow"></p>
+    <h2 id="solutionModalTitle"></h2>
+    <p class="solution-modal-lead" id="solutionModalLead"></p>
+    <div class="solution-modal-grid">
+      <div><h3 data-i18n="modalWhat">What it is</h3><p id="solutionModalWhat"></p></div>
+      <div><h3 data-i18n="modalHelps">How it helps</h3><ul id="solutionModalBenefits"></ul></div>
+    </div>
+    <div class="solution-modal-outcome"><span data-i18n="modalOutcome">Operational impact</span><strong id="solutionModalOutcome"></strong></div>
+    <a class="btn btn-primary" id="solutionModalCta" href="#contact"></a>
+  </section>
+</div>
 
     <footer class="footer">
       <div class="footer-brand"><div class="footer-logo">G</div><div><strong>GUVEL</strong><span>SMARTER INDUSTRIAL SYSTEMS</span></div></div>
