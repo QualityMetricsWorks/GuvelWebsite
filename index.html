@@ -97,8 +97,19 @@ body.modal-open{overflow:hidden}
 .abstract-g-experience .w6{left:50%;bottom:2%;color:var(--guvel-red)}
 .abstract-g-experience .morph-caption{color:#172033}
 @keyframes blobMorph{0%,100%{transform:translate(-50%,-50%) scale(.65) rotate(0deg);border-radius:58% 42% 64% 36% / 42% 54% 46% 58%;opacity:.05}40%{transform:translate(-50%,-50%) scale(1.25) rotate(28deg);border-radius:35% 65% 40% 60% / 58% 36% 64% 42%;opacity:.14}65%{transform:translate(-50%,-50%) scale(.9) rotate(-20deg);opacity:.08}}
-@keyframes gDissolve{0%,20%,100%{transform:translate(-50%,-50%) scale(1);filter:none;clip-path:inset(0 0 0 0)}31%{transform:translate(-50%,-50%) scale(1.03,.98) skewX(2deg);clip-path:polygon(0 0,100% 0,100% 22%,88% 27%,100% 33%,100% 100%,0 100%,0 72%,12% 65%,0 58%)}43%{transform:translate(-50%,-50%) scale(.94,.88);filter:blur(1.4px);clip-path:polygon(28% 0,100% 7%,73% 28%,100% 45%,58% 54%,94% 76%,26% 100%,0 73%,17% 48%,0 22%)}55%{transform:translate(-50%,-50%) scale(.72);opacity:.28;filter:blur(3px)}68%{transform:translate(-50%,-50%) scale(.98);opacity:.92;filter:blur(.3px)}}
+/* One complete transformation: G → dissolve completely → words → words fade → G rebuilds */
+@keyframes gDissolve{0%,22%{transform:translate(-50%,-50%) scale(1);opacity:1;filter:none;clip-path:inset(0 0 0 0)}30%{transform:translate(-50%,-50%) scale(1.04,.97) skewX(2deg);opacity:.92;filter:blur(.4px);clip-path:polygon(0 0,100% 0,100% 22%,88% 27%,100% 33%,100% 100%,0 100%,0 72%,12% 65%,0 58%)}40%{transform:translate(-50%,-50%) scale(.88,.78);opacity:.35;filter:blur(2.5px);clip-path:polygon(28% 0,100% 7%,73% 28%,100% 45%,58% 54%,94% 76%,26% 100%,0 73%,17% 48%,0 22%)}46%,68%{transform:translate(-50%,-50%) scale(.62);opacity:0;filter:blur(7px);clip-path:inset(48% 48% 48% 48%)}76%{transform:translate(-50%,-50%) scale(.72);opacity:.22;filter:blur(4px);clip-path:polygon(46% 0,58% 0,82% 22%,100% 36%,75% 57%,92% 100%,36% 100%,0 72%,20% 43%,0 20%)}88%{transform:translate(-50%,-50%) scale(1.02);opacity:1;filter:blur(.3px);clip-path:inset(0 0 0 0)}100%{transform:translate(-50%,-50%) scale(1);opacity:1;filter:none;clip-path:inset(0 0 0 0)}}
+.abstract-g-experience .morph-word{animation:abstractWordCycle 10s cubic-bezier(.22,1,.36,1) infinite!important;animation-delay:0s!important}
+@keyframes abstractWordCycle{0%,35%{opacity:0;filter:blur(8px);transform:translateY(8px) scale(.88)}43%{opacity:.9;filter:blur(1px);transform:translateY(2px) scale(.97)}50%,66%{opacity:1;filter:blur(0);transform:translateY(0) scale(1)}74%,100%{opacity:0;filter:blur(5px);transform:translateY(-8px) scale(.9)}}
+.abstract-g-experience .w5,.abstract-g-experience .w6{animation-name:abstractWordCentered!important}
+@keyframes abstractWordCentered{0%,35%{opacity:0;filter:blur(8px);transform:translateX(-50%) translateY(8px) scale(.88)}43%{opacity:.9;filter:blur(1px);transform:translateX(-50%) translateY(2px) scale(.97)}50%,66%{opacity:1;filter:blur(0);transform:translateX(-50%) translateY(0) scale(1)}74%,100%{opacity:0;filter:blur(5px);transform:translateX(-50%) translateY(-8px) scale(.9)}}
 @media(max-width:720px){.solution-modal-grid{grid-template-columns:1fr}.abstract-g-experience .morph-stage{height:300px}.abstract-g-experience .w1{left:2%}.abstract-g-experience .w2{right:2%}.abstract-g-experience .w3{left:2%}.abstract-g-experience .w4{right:2%}.g-glitch{width:170px;height:170px}}
+
+/* v1.5.1 surgical fixes: every solution receives the same permanent top identity line */
+.solutions-grid .solution-card::before{content:""!important;position:absolute!important;left:0!important;right:0!important;top:0!important;bottom:auto!important;height:4px!important;background:linear-gradient(90deg,var(--guvel-red),var(--guvel-cyan))!important;opacity:1!important;transform:scaleX(1)!important;transform-origin:left!important;z-index:4!important}
+.solutions-grid .solution-card.featured::before{height:4px!important}
+/* Preserve the original hover accent without stealing the top line */
+.solutions-grid .solution-card::after{pointer-events:none}
 </style>
 
 </head>
